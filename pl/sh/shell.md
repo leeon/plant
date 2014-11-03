@@ -1,15 +1,3 @@
----
-layout:     note
-title:      Shell脚本
-description: Shell是一种编程语言，同时也是一个有用的工具
----
-
-* 目录(this text will be scraped).
-{:toc}
-
-
-
-
 #Quick Start
 
 shell使用`#` 注释
