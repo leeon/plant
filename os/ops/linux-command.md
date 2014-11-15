@@ -43,13 +43,14 @@
 
 
 ### _cat_
-显示文件或者链接文件并且打印
+concatenate, 合并多个文件，如果没有指定输出，就显示文件到控制台。
+
+`cat file1 file2` 合并file1 和 file2，文件拼接顺序按照参数顺序排序
 
 `cat filename` 显示一个文件
 
 `cat > filename` 从输入创建一个文件
 
-`cat file1 file2` 将file1的内容追加到file2
 
 *arguments:* 
 
@@ -370,5 +371,71 @@ wc命令word count 用于文本统计
     wc -c #统计字节数
     wc -m 统计字符数
 
+
+###_uniq_
+
+uniq命令可以去除文本文件中的重复行，值得注意的是uniq命令只能去除连续重复的行，所以一般和`sort`命令结合使用。
+
+例如:
+
+    uniq some.log #显示去重后的文本
+    uniq -u some.log #显示那些没有重复的行
+    uniq -d some.log #显示那些有重复的行
+    uniq -c some.log #附带统计信息
+
+uniq还可以过滤一些字段来实现更加高级的去重过滤，比如服务器上的日志一般都以时间开头：
+    
+    2014-11-16 tom visit a.com
+    2014-11-17 tom visit a.com
+    2014-11-17 jack visit b.com
+
+如果项去重上面的日志,可以过滤掉前面的时间字符串，以下两种方案都可以解决
+    
+    uniq -f 1 test.log #uniq会根据空格把一行文本分为不同字段(1...n)，-f命令指定忽略掉前n个字段
+    uniq -s 10 test.log # -s命令指定忽略前n个字符
+
+> 关于`sort | uniq`和`sort -u`的区别,`sort -u`是后来出现的一个命令选项，二者可以实现相同的功能。使用前者可以利用`uniq`本身的参数提供更加丰富的功能。
+
+###_sort_
+
+sort命令可以对文本内容的每一行进行排序。
+
+例如：
+    
+    sort test.log #基本排序，从第一个字符开始比较，依次向后
+    sort -r test.log  #逆序
+    sort -u test.log  #去重
+
+    sort -c test.log  #检查文件是否有序，不排序
+
+sort可以支持更加高级的排序，比如按照字段排序，默认情况下sort命令用`空格`来区分字段，使用`-t`参数可以指定具体的间隔符来产生不同的字段[1...n]，比如日志中常使用`|`区分
+
+    sort -t |
+
+指定字段后，可以指定按照从哪个字段开始排序,使用`-k`命令
+
+    sort -t | -k 2 test.log  #按照从第二个字段开始排序
+    sort -t | -k 2,5 test.log  #按照从第二个字段到第五个字段之间的内容排序
+    sort -t | -k 2.2 5.4 test.log  #按照从第二个字段第二个字符开始，第五个字段第四个字符结束之间的内容排序
+
+
+
+
+
+
+
+
+
+
+
+
+-------
+
+
+#参考资料
+
++ [技巧: 用 uniq 除去重复行](http://www.ibm.com/developerworks/cn/linux/l-tip-prompt/l-tiptex6/)
++ [技巧: 用 sort 和 tsort 对文件进行排序](http://www.ibm.com/developerworks/cn/linux/l-tip-prompt/l-tiptex4/index.html)
++ [http://unix.stackexchange.com/questions/76049/what-is-the-difference-between-sort-u-and-sort-uniq](http://unix.stackexchange.com/questions/76049/what-is-the-difference-between-sort-u-and-sort-uniq)
 
  
