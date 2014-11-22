@@ -24,24 +24,25 @@ description: 使用Mac的日常
 
 [Alfred](http://www.alfredapp.com/) 快速打开程序的利器
 
-[Evernote](http://www.evernote.com) 笔记同步，知识管理，丰富的chrome插件支持
+[Evernote](http://www.evernote.com) 笔记同步，知识管理，丰富的chrome插件支持。
+
+[OneNote]() 微软的笔记工具，适合组织结构性更强的笔记。
 
 [Mindmanager]() 强大的思维导图工具
 
-[日历]() Mac自带的日历工具，搭配exchange服务，所平台同步
+[日历]() Mac自带的日历工具，搭配exchange服务，所平台之间同步
 
 [Mou](http://mouapp.com/) 可视化Markdown编辑器
 
-[AirMail](http://airmailapp.info/) 最新推出的邮件客户端，做的很用心
+[Foxmail]() 接入公司邮箱更加的方便，中文编码没有问题。
 
 [Kindle](https://itunes.apple.com/us/app/kindle/id405399194?mt=12) 这个就不要多说了，这个方便做笔记
 
-[百度云](http://yun.baidu.com) 很好的解决了我的Mac和Windows Phone之间数据同步的问题
-
 [Lightroom](http://www.adobe.com/support/downloads/product.jsp?platform=Macintosh&product=113) 爱好摄影不可缺少
 
-[Photoshop](http://www.adobe.com/support/downloads/product.jsp?product=39&platform=Macintosh) 神器
+[Photoshop](http://www.adobe.com/support/downloads/product.jsp?product=39&platform=Macintosh) 修图神器
 
+[Sketch]() 设计画图
 -----------
 
 #开发类
@@ -71,6 +72,12 @@ description: 使用Mac的日常
 `cmd+tab`应用间切换
 
 ---------
+
+
+#Tips
+
+###Spoltlight 搜索
+搜索出结果时经常希望打开文件所在的文件夹，使用`cmd + enter` 的方式就可以了，个人感觉OS X这里的体验做的不够好。
 
 
 #iTerm 2

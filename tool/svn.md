@@ -4,20 +4,58 @@ title:      SVN
 description: SVN 是一款集中式的版本控制工具
 ---
 
+#Make it clear
+使用svn最好要了解它是一个集中式的版本控制工具,我们每个人的开发机上安装的一般是客户端，大家通过一个服务端中央仓库共享数据，每一次提交操作就会有一个通信请求，更新中央仓库。
 
-* 目录(this text will be scraped).
-{:toc}
+这样就会理解当我们提交代码后：
+    
+    svn commit    # commit the code
+    svn log       # can't see our latest commit, why?
+
+查看提交历史居然没有我们最新的提交记录，原因就是这些变更记录在了中央仓库,需要我们拉取更新后才能看到
+
+    svn update    # update our workspace with centeral repo
+    svn log       # see out commit logs
+
+
 
 
 #基础操作
+
+本部分命令为版本库读取操作。
+
+###svn cat
+查看版本库中的一个文件，默认选择`HEAD`版本。
+
+    svn cat http://your-repo.com/some.txt
+    svn cat http://your-repo.com/some.txt -r20   #查看特定版本下的文件
+    svn cat http://your-repo.com/some.txt.r20    #重定向文件内容到一个文件
+
+###svn list
+列出版本库中的目录信息，默认显示`HEAD`版本。
+    
+    svn list http://your-repo.com/
+
+###svn info
+查看目录文件版本信息
+    
+    svn info url    # remember url can also be local dir or a file
+
+
+
+------------
+
+此部分文件目录写操作相关
 
 ###svn mkdir 
 在版本库中创建目录
 
     svn mkdir mydir
 
+
 ###svn cp
 拷贝版本库中的文件或者目录
+
 
 
 ###svn mv
@@ -53,6 +91,25 @@ description: SVN 是一款集中式的版本控制工具
 
     svn delete --keep-local file.o
     svn commit -m "delete a file from repository"
+
+
+
+-------
+
+
+此部分为版本管理相关
+
+###svn checkout
+从版本库中检出一个项目到本地。
+
+    svn checkout http://remote.com/repo your-lcoal-dir
+
+
+###svn add
+将文件或者目录加到版本库中，开始跟踪。默认递归添加文件。
+
+    svn add path/dir
+
 
 
 ###svn log

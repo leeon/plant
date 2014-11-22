@@ -4,24 +4,22 @@ title:      Sublime Text 3
 description: 性感的编辑器
 ---
 
-* 目录(this text will be scraped).
-{:toc}
 
+> 我使用的是Sublime Text 3
 
-我使用的是Sublime Text 3
+#Usage in terminal
 
-#Terminal 
-可以用过软连接，将`subl`作为terminal可以识别的命令 *（for mac os only）*
+我们可以用过软连接，将`subl`作为terminal可以识别的命令 *（for mac os）*
     
     ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 #Package Control
 
-` command + \`` 调出console，输入下面的代码饥即可安装
+` command + \`` 调出console，输入下面的代码即可安装
 
     import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
-`shift+command+p` 调出command pannel,通过键入`install`就可以快速的安装新的包。
+`shift+command+p` 调出command pannel,通过键入`install`可以快速的安装新的包。
 
 
 #Config
@@ -101,6 +99,7 @@ description: 性感的编辑器
 
 ------------
 
+
 ###Emmet
 
 一个用来快速编写前端代码的插件，采用`Zen Coding`的语法规则。
@@ -137,13 +136,19 @@ description: 性感的编辑器
 
 
 ###Git Gutter
-Git增强插件，可以显示那些代码是相对于版本库变化的
+Git增强插件，可以显示那些代码是相对于版本库变化的。
+
+![](https://camo.githubusercontent.com/272854f332fd374f50a58060615af911b9798fbc/68747470733a2f2f7261772e6769746875622e636f6d2f6a69736161636b732f4769744775747465722f6d61737465722f73637265656e73686f742e706e67)
 
 ###Codecs33
 Sublime Text 3 编码支持插件。
 
 ###ConvertToUTF8
 支持UTF-8 编码。
+
+
+###AllAutocomplete
+Sublime默认只支持单个文件内代码补全提示，这个插件支持全文范围内的代码补全。
 
 #Issues
 
