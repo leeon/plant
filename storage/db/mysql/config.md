@@ -1,12 +1,9 @@
 ---
 layout:     note
-title:      MySQL
+title:      MySQL Config
 description: 服务端MySQL配置
 ---
 
-
-* 目录(this text will be scraped).
-{:toc}
 
 #安装
 
@@ -46,26 +43,5 @@ description: 服务端MySQL配置
     
     /etc/init.d/mysqld restart
 
-
-设置某个数据库编码
-
-    alter database testdb character set utf8;
-
-###使用root登录
-
-    mysql -u root -p
-
-###创建新的数据库
-    
-    create database test_db
-
-###用户权限
-创建一个新用户，并将该数据库的权限赋给他
-
-    grant all on test_db.* to ‘newdbuser’ identified by ‘dbuserpassword’;
-
-更新权限
-
-    flush privileges;
 
 

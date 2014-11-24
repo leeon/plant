@@ -4,8 +4,6 @@ title:      MySQL
 description: 关系型数据库MySQL
 ---
 
-* 目录(this text will be scraped).
-{:toc}
 
 #SQL语句
 
@@ -15,54 +13,42 @@ SQL对于大小写不敏感。
 
 SQL是一种声明式的语言，描述的是对结果的要求，而非执行步骤。语句的执行顺序和语法顺序并不一致，因此使用自定义变量要注意声明顺序的问题。比如一个`FROM`最先执行，下面是几个常用语句的执行顺序。
 
-+ FROM 
-+ WHERE
-+ GROUP BY
-+ HAVING
-+ SELECT
-+ DISTINCT
-+ UNION
-+ ORDER BY
+1. FROM 
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. DISTINCT
+7. UNION
+8. ORDER BY
 
 
 
 
-###DML & DDL
+#基础CURD
 
-DML数据操作语言和DDL数据定义语言，DML用于执行数据的CURD，而DDL用于创建关系，约束等。常用的DDL有
-
-+ CREATE DATABASE
-+ ALTER DATABASE
-+ CREATE TABLE
-+ ALTER TABLE
-+ DROP TABLE
-+ CREATE INDEX
-+ DROP INDEX
-
-###CURD
-
-#####insert
+###INSERT
+向Person表中插入新的数据，可以直接插入，也可以按照字段名字插入.
 
     INSERT INTO Persons VALUES ('Gates', 'Bill', 'Xuanwumen 10', 'Beijing')
     INSERT INTO Persons (LastName, Address) VALUES ('Wilson', 'Champs-Elysees')
 
-向Person表中插入新的数据，可以直接插入，也可以按照字段名字插入.
 
 
-#####update
+###UPDATE
+修改表中的某一行的几个字段
 
     UPDATE Person SET Address = 'Zhongshan 23', City = 'Nanjing'
     WHERE LastName = 'Wilson'
 
-修改表中的某一行的几个字段
 
-#####delete
+###DELETE
+删除表中满足条件的元素
 
     DELETE FROM Person WHERE LastName = 'Wilson' 
 
-删除表中满足条件的元素
 
-#####select
+###SELECT
 
     SELECT [DISTINCT] first_name, last_name FROM employees WHERE salary > 100000
 
@@ -75,33 +61,35 @@ FROM语句输出的是一张联合表，假如a 有3个字段，b有5个字段�
     ... FROM a,b
 
 
-####更多查询
+#高级查询
 查询操作中和**SELECT**配合的语句也很关键.
 
-#####ORDER BY
+###ORDER BY
 对结果集进行排序，例如对结果根据年龄降序：
 
     ... ORDER BY age DESC 
 
-####GROUP BY
+###GROUP BY
 将数据集**划分**，对每个数据集操作,和聚合函数(如MAX,COUNT,AVG,SUM)合作使用.例如统计不同消费者的个人订单和，GROUP BY关键是分组，这里的意义是让SUM函数作用在属于同一个Customer的orderPrice上。
 
     SELECT Customer,SUM(OrderPrice) FROM Orders
     GROUP BY Customer
 
-#####HAVING
+###HAVING
 筛选GROUP BY 分组后的数据,延续上面的例子，增加HAVING对分组后的数据筛选，要求显示订单总和大于1000的客户,这里不能使用WHERE，原因在于WHERE在GROUP BY之前执行。
 
     SELECT Customer,SUM(OrderPrice) FROM Orders
     GROUP BY Customer
     HAVING SUM(OrderPrice) > 1000
 
-#####UNION
+###UNION
 合并多个SELECT的结果集,要求合并的结果集是相同数据种类，默认**并集**操作,UNION ALL操作可以保留重复项。
 
     SELECT column_name(s) FROM table_name1
     UNION
     SELECT column_name(s) FROM table_name2
+
+
 
 
 ###JOIN

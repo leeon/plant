@@ -1,3 +1,10 @@
+---
+layout:     note
+title:      C++ 编译
+description: 一个C++程序是如何编译的
+---
+
+
 在使用Makefile之前一定要了解基本编译的知识
 
 #简单编译
