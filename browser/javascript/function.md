@@ -1,3 +1,8 @@
+layout:     note
+title:      JavaScript 函数
+description: 无
+---
+
 
 #函数基础
 

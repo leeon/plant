@@ -1,3 +1,9 @@
+layout:     note
+title:      JavaScript 语法基础
+description: 数据类型和控制流
+---
+
+
 #数据类型
 
 

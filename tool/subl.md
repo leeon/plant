@@ -71,6 +71,10 @@ description: 性感的编辑器
 `command  R` 在当前文件中切换不同的方法 == `command + P`+`@`
 
 `ctrl  -` 回到上次的位置，相反命令是 `ctrl  shift  +`
+
+`command f` 查找
+
+`commans shift f` 目录查找，可以全局搜索也可以针对目录搜索
  
 ###Windows and tabs
 

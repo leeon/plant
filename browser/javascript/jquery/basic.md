@@ -1,3 +1,9 @@
+layout:     note
+title:      jQuery框架
+description: 丰富的事件和DOM操作支持
+---
+
+
 jQuery是一个应用非常广泛的JavaScript框架，它为网页DOM元素操作以及事件处理提供了强大的支持。
 
 #选择器
