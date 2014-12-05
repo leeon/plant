@@ -1,3 +1,4 @@
+---
 layout:     note
 title:      jQuery框架
 description: 丰富的事件和DOM操作支持

@@ -1,3 +1,4 @@
+---
 layout:     note
 title:      JavaScript 语法基础
 description: 数据类型和控制流
@@ -44,7 +45,7 @@ JavaScript中的数组和Python一样，支持多种数据类型。例如：
     var mList = ['name',23,{type:"students"}];
     var mArray = new Array(3);
 
-使用数组是一件很有意思的事情：比如 [JavaScript中多变的数组](http://octsky.com/post/52)
+使用数组是一件很有意思的事情：比如 [JavaScript中多变的数组](http://atleeon.com/code/2013/10/17/js-array.html)
 
 > object可以表示成JSON格式。
 

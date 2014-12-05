@@ -57,46 +57,40 @@ gcc和g++都可以编译c和c++语言，区别是遇到一个`.c`文件，gcc当
 
 apple.h文件包含了一个apple类的声明
 
-{% highlight cpp%}
-#include <iostream>
 
-#ifndef APPLE_H
-#define APPLE_H value
+    #include <iostream>
 
-using namespace std;
+    #ifndef APPLE_H
+    #define APPLE_H value
 
-class apple
-{
-public:
-    apple();
-    apple(const string color):color(color),weight(200){}
-    void info();    
-    ~apple();
-private:
-    string color;
-    int weight;
-};
+    using namespace std;
 
-#endif
-{% endhighlight %}
+    class apple
+    {
+    public:
+        apple();
+        apple(const string color):color(color),weight(200){}
+        void info();    
+        ~apple();
+    private:
+        string color;
+        int weight;
+    };
+
+    #endif
 
 apple.cpp文件中为类成员函数的具体定义
 
 
-{% highlight cpp %} 
-#include "apple.h"
-apple::apple(){}
+    #include "apple.h"
+    apple::apple(){}
 
-apple::~apple(){}
+    apple::~apple(){}
 
-void apple::info()
-{
-    cout<<"This is a "<<color<<" apple."<<endl;
-}
-{% endhighlight %}
-
-
-
+    void apple::info()
+    {
+        cout<<"This is a "<<color<<" apple."<<endl;
+    }
 
 
 

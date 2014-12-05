@@ -1,3 +1,4 @@
+---
 layout:     note
 title:      JavaScript 函数
 description: 无
