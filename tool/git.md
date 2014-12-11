@@ -4,10 +4,6 @@ title:      Git
 description: Git是一款分布式的版本控制工具
 ---
 
-
-* 目录(this text will be scraped).
-{:toc}
-
 #背景知识
  
 ###历史故事：
@@ -24,7 +20,7 @@ description: Git是一款分布式的版本控制工具
 Git保存的不是文件差异和变化量而是一些列的文件快照。
 Git关注的是文件是不是发生了变化，如果有变化则记录新的快照，如果没有则创建一个单纯的链接指向原来的文件。
 
-![](/assets/images/pages/git1.png)
+![](http://iissnan.com/progit/book_src/figures/18333fig0105-tn.png)
 
 Git中分为工作环境（Workspace），暂存区（State/Index），版本库（Repository）。
 
@@ -45,31 +41,33 @@ Git 中的分支，其实本质上仅仅是个指向 commit 对象的可变指�
 2. 对修改后的文件进行快照，然后保存到暂存区域。 
 3. 提交更新，将保存在暂存区域的文件快照永久转储到 Git 目录中。
 
-#配置
+#安装&配置
+    
+安装参考 [Github Help](https://help.github.com/articles/set-up-git/)
 
-    git config 三个级别: 版本库  全局 系统 优先级依次递减 类似程序设计中的变量作用域
+配置方式    
+
+    git config 三个级别: 版本库  全局 系统 优先级依次递减, 类似程序设计中的变量作用域
     git config --system  对应 /etc/gitconfig
     git config --global 对应~/.gitconfig 
-    git config -e 执行编辑文件
+    git config -e 打开本项目配置文件
     git config [--options] <section>.key value  用于编辑 .gitconfig 文件中的某一个特定项目的值
 
-###常用配置    
-    user.name value
-    user.email value
-    core.editor emacs 
-    merge.tool vimdiff
-    core.quotepath false   正常显示中文
+
+
+
+#使用
 
 ###一人一分支（阶段一）
 
 ####git init
-初始化一个版本库
+在本地初始化, 把当前目录初始化为一个版本库。
 
 ####git clone
 从远程初始化一个版本库,复制到本地
 
 ####git add
-向staged区添加一个新的文件『变化』 git add .添加所有的文件『变化』,每当我们完成文件的部分修改后都可以使用`add`命令，将这些变化添加到staged区域。（
+向staged区添加一个新的文件『变化』 `git add .` 添加所有的文件『变化』,每当我们完成文件的部分修改后都可以使用`add`命令，将这些变化添加到staged区域。
 
 > 区别于svn add命令，git中文件多次变化可能会需要多次的add操作，而svn只要对一个文件进行一次add,就会一直跟踪变化
 
@@ -167,6 +165,40 @@ Git 中的分支，其实本质上仅仅是个指向 commit 对象的可变指�
     git push origin serverfix:somebranch 推送新的分支
     git merge origin/serverfix 合并远程分支
     git checkout --track origin/serverfix
+
+
+####Sample For flora
+
+(1) 进入 https://github.com/leeon/plant ， 点击 Fork 拷贝项目到自己的GitHub账号下。
+
+(2) 将自己的项目clone到本地
+
+    git clone git@github.com:floraLovelyName/plant.git
+
+(3) 检查远程分支，并添加原始项目分支
+    
+    git remote -v  #查看项目有哪些远程分支
+    git remote add leeon git@github.com:leeon/plant.git  #添加leeon分支，用于协作
+    git remote -v  #查看添加后的效果：）
+
+(4) 获取主repo的最新版本，相当于印象笔记先同步一下
+    
+    git fetch leeon           #拉取更新
+    git merge leeon/master    #合并更新到自己的项目里，同步完成：）
+
+(5) 随意修改项目，做笔记，然后提交到自己的版本库
+
+    git add .
+    git commit 
+    git push origin master
+    ....
+
+(6) 最后一步，提交个pull requst, 到下面的地址，点击New pull request, 接下来交给leeon来合并。Good Work!
+    
+    https://github.com/leeon/plant/pulls
+
+
+
 
 
 ###一些Tips:

@@ -12,13 +12,15 @@ description: 常用的命令
 ###登录
 
     mysql -u root -p
+    mysql -h 127.0.0.1 -P 3306 -u rrot -p 
+    mysql db_name
 
 
 ###权限
 
 创建一个新用户，并将该数据库的权限赋给他
 
-    grant all on test_db.* to ‘newdbuser’ identified by ‘dbuserpassword’;
+    GRANT ALL ON learn_db.* to ‘newdbuser’ identified by ‘dbuserpassword’;
 
 更新权限
 
@@ -31,21 +33,33 @@ description: 常用的命令
 
 #Database
 
+###查看
+
+    SHOW DATABASES;
+
+###使用
+    
+    USE learn_db;
+
 ###创建
 
-    create database test_db
+    CREATE DATABASE learn_db;
 
 ###修改
 
 设置某个数据库编码
 
-    alter database testdb character set utf8;
+    ALTER DATABASE learn_db character SET utf8;
 
 
 ------------
 
 
 #Table 
+
+###查看
+
+    SHOW TABLES;
 
 ###创建
 
