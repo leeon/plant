@@ -1,6 +1,45 @@
 #include <iostream>
 
 
+
+enum eTable
+{
+    A,
+    B,
+    C,
+    D,
+    E,
+    F,
+    G,
+    H,
+    I,
+    J,
+    K,
+    L,
+    M,
+    N,
+    O,
+    P,
+    Q,
+    R,
+    S,
+    T,
+};
+
+void test_enum()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+
+    printf("sizeof(eTable): %lu\n", sizeof(eTable));
+    eTable e;
+    printf("sizeof(e)%lu\n", sizeof(e));
+
+    int i = e;
+    printf("default e = %d\n", A);
+    printf("from e to i = %d\n", i);
+
+}
+
 void diff_array_with_ptr()
 {
 
@@ -56,6 +95,12 @@ int main(int argc, char const *argv[])
     diff_constptr_with_ptrconst();
     
     test_array();
+
+    test_enum();
     
     return 0;
 }
+
+
+
+

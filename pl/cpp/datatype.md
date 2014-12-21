@@ -6,6 +6,9 @@ description: 一切的基础
 ---
 
 
+#int
+
+#enum
 
 #Array
 
