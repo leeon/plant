@@ -2,6 +2,39 @@
 
 
 
+void test_type_conversion()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+    
+    int i = -12;
+    unsigned int ui = 100;
+    unsigned int result = ui + i;
+    printf("%u\n", result);
+
+}
+
+void test_sizeof()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+    printf("sizeof int %lu\n", sizeof(int) );
+    printf("sizeof unsigned int %lu\n", sizeof(unsigned int) );
+    printf("sizeof short %lu\n", sizeof(short) );
+    printf("sizeof long %lu\n", sizeof(long) );
+    printf("sizeof long long %lu\n", sizeof(long long) );
+
+}
+
+
+enum eA
+{
+    a_on = 2,
+};
+
+enum eB
+{
+    b_on = 2,
+};
+
 enum eTable
 {
     A,
@@ -31,8 +64,15 @@ void test_enum()
     printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
 
     printf("sizeof(eTable): %lu\n", sizeof(eTable));
-    eTable e;
+    eTable e = D;
+    int ie = e;
+    e = eTable(-12);
+    
+    eA on = a_on;
+    int ii = on;
+    printf("a_on = b_on %d\n", ii == b_on );    
     printf("sizeof(e)%lu\n", sizeof(e));
+    printf("%d\n", e);
 
     int i = e;
     printf("default e = %d\n", A);
@@ -97,7 +137,11 @@ int main(int argc, char const *argv[])
     test_array();
 
     test_enum();
-    
+
+    test_sizeof();    
+
+    test_type_conversion();
+
     return 0;
 }
 
