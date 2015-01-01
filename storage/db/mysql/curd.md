@@ -22,6 +22,9 @@ SQL是一种声明式的语言，描述的是对结果的要求，而非执行�
 7. UNION
 8. ORDER BY
 
+###原理
+SQL的执行顺序是由其背后的数学原理决定的。 TODO
+
 
 
 
@@ -111,7 +114,7 @@ JOIN方式共有5种：
 
 最常见的JOIN方式，包括INNER JOIN（或者JOIN） 和 OUTER JOIN（包括LEFT、RIGHT、FULL OUTER JOIN,不同的JOIN方式可以用一张图来解释：
 
-![](https://raw.github.com/leeon/TechPics/master/database/mysql/SQL-Joins.png)
+![](./img/sql_join.jpg)
 
 #####SEMI JOIN
 
@@ -145,5 +148,13 @@ JOIN方式共有5种：
 
 too hard for me now...
 
+
+
+
+
+
+#参考资料
+
++ [十步理解SQL](http://blog.jobbole.com/55086/)
 
 
