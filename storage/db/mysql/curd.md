@@ -142,11 +142,22 @@ JOIN方式共有5种：
 
 #####CROSS JOIN
 
-对连接的表做乘积，效果和`FROM a,b`一样，用处较少
+对连接的表做乘积，效果和`FROM a,b`一样，用处较少。
 
 #####DIVISION
 
 too hard for me now...
+
+
+
+#子查询
+
+SQL其实就是对表的引用，最终输出的也是一个表。因此可以使用多个语句嵌套使用，就产生了子查询。子查询的结果也是对一个表的引用，可以为其定义一个别名，表意更加的明确。
+
+    ...
+    FROM 
+    (SELECT * FROM t_user where age > 12) as user_over12
+    WEHRE ...
 
 
 

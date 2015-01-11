@@ -22,23 +22,27 @@ description: 使用Mac的日常
 
 #日常类
 
-[Alfred](http://www.alfredapp.com/) 快速打开程序的利器
+> 排名依据个人使用频率排序
+
+[Chrome]() 简洁的浏览器，丰富插件支持，附带强大的开发调试工具。
 
 [Evernote](http://www.evernote.com) 笔记同步，知识管理，丰富的chrome插件支持。
 
-[OneNote]() 微软的笔记工具，适合组织结构性更强的笔记。
+[日历]() Mac自带的日历工具，搭配exchange服务，所平台之间同步。个人已经改用iCloud。
 
-[Mindmanager]() 强大的思维导图工具
-
-[日历]() Mac自带的日历工具，搭配exchange服务，所平台之间同步
-
-[Mou](http://mouapp.com/) 可视化Markdown编辑器
+[Alfred](http://www.alfredapp.com/) 快速打开程序的利器
 
 [Foxmail]() 接入公司邮箱更加的方便，中文编码没有问题。
 
-[Kindle](https://itunes.apple.com/us/app/kindle/id405399194?mt=12) 这个就不要多说了，这个方便做笔记
+[Lightroom](http://www.adobe.com/support/downloads/product.jsp?platform=Macintosh&product=113) 摄影后期处理软件
 
-[Lightroom](http://www.adobe.com/support/downloads/product.jsp?platform=Macintosh&product=113) 爱好摄影不可缺少
+[Mindmanager]() 强大的思维导图工具
+
+[Mou](http://mouapp.com/) 可视化Markdown编辑器
+
+[网易云音乐]() 简洁的音乐app
+
+[Kindle](https://itunes.apple.com/us/app/kindle/id405399194?mt=12) 这个就不要多说了，这个方便做笔记
 
 [Photoshop](http://www.adobe.com/support/downloads/product.jsp?product=39&platform=Macintosh) 修图神器
 
@@ -46,17 +50,21 @@ description: 使用Mac的日常
 -----------
 
 #开发类
-[Sublime Text 3](http://www.sublimetext.com/) very sexy的编辑器
 
-[Dash](https://itunes.apple.com/cn/app/dash-docs-snippets/id458034879?mt=12) 快捷的查看API工具，可与st3和Alfred结合
-
-[iTerm2](http://www.iterm2.com/) 终端工具，搭配zsh
+> 排名依据个人使用频率排序
 
 [zsh](https://github.com/robbyrussell/oh-my-zsh/) 再见，bash
 
-[Homebrew](http://mxcl.github.io/homebrew/) 管理软件包
+[iTerm2](http://www.iterm2.com/) 终端工具，搭配zsh
+
+[Sublime Text 3](http://www.sublimetext.com/) very sexy的编辑器
 
 [Git](http://git-scm.com/‎) 不解释
+
+[Dash](https://itunes.apple.com/cn/app/dash-docs-snippets/id458034879?mt=12) 快捷的查看API工具，可与st3和Alfred结合
+
+[Homebrew](http://mxcl.github.io/homebrew/) 管理软件包
+
 
 
 ----------
@@ -78,6 +86,11 @@ description: 使用Mac的日常
 
 ###Spoltlight 搜索
 搜索出结果时经常希望打开文件所在的文件夹，使用`cmd + enter` 的方式就可以了，个人感觉OS X这里的体验做的不够好。
+
+###pdf转换jpg
+使用 `预览.app`, 使用预览打开文件或者，右键文件，在打开方式中选择**预览**，在文件菜单中，导出为相应的格式即可。
+
+> 预览 是一个很好用的工具，也可以预览其他格式的文件，比如 ppt, keynote, xls等，然后导出为pdf文件。
 
 
 #iTerm 2
