@@ -36,13 +36,14 @@ I hope it will become a big tree one day with flora.
     + [Linux Command](os/ops/linux-command.md)
 
 
-###Storage
+###Data
 
 + db
     + mysql
-        + [Config](storage/db/mysql/config.md)
-        + [Command](storage/db/mysql/command.md)
-        + [curd](storage/db/mysql/curd.md)
+        + [1 Theory](data/db/mysql/1-theory.md)
+        + [2 Config](data/db/mysql/2-config.md)
+        + [3 Command](data/db/mysql/3-command.md)
+        + [4 curd](data/db/mysql/4-curd.md)
 
 
 ###Tools
