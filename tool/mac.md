@@ -71,13 +71,13 @@ description: 使用Mac的日常
 
 #快捷键
 
-`option+space` 打开alfred
+`option + space` 打开alfred
 
-`cmd+option+esc` 强制退出某个任务 
+`cmd + option + esc` 强制退出某个任务 
 
 `Fn + F1` 举例子，使用f1功能键
 
-`cmd+tab`应用间切换
+`cmd + tab`应用间切换
 
 ---------
 
@@ -92,43 +92,23 @@ description: 使用Mac的日常
 
 > 预览 是一个很好用的工具，也可以预览其他格式的文件，比如 ppt, keynote, xls等，然后导出为pdf文件。
 
+###截图
 
-#iTerm 2
+`cmd + shift + 3`   全屏截屏，保存png格式图片到桌面。同时按下`ctrl`将图片复制。
 
-iTerm 2 是一款替代原生系统终端工具的利器，它支持多窗口多标签的操作，同时允许用户自定义很多种主题。
+`cmd + shift + 4`   自定义截屏，选择特定区域，保存png格式图片到桌面。同时按下`ctrl`将图片复制。
 
-我喜欢的特性：
 
-###自定义主题
-在preferences -> Profiles -> Colors -> loadPresets下可以导入本地的主题文件。
+在自定义截屏模式下：
 
-我使用的主题文件是：[Solarized](https://github.com/leeon/dotFiles/tree/master/res/iterm)
-
-###多窗口管理
-我们可以使用多窗口，也可以使用多标签来操作。
-
-分割当前的窗口可以使用：
-
-`cmd + d` 水平分割窗口
-
-`cmd + shift + d` 垂直分割窗口
-
-`cmd + [` 和 `cmd + ]`在分割窗口之间切换
++ 按下`space`，鼠标变换为相机图标，单击可以快速对一个子窗口进行截屏。
++ 不松开鼠标，按住 `option`键，可以进行中心缩放
++ 不松开鼠标，按住 `space`键，可以移动选区
++ 不松开鼠标，按住 `shift`键，可以水平或垂直移动选区。
 
 
 
-使用多标签页可以采用
+**参考资料：**
 
-`cmd + n` 创建新的标签页
-
-`cmd + 数字`  在不同的标签中切换
-
-`cmd + w`关闭当前的标签页
-
-
-其他操作:
-`cmd + ;` 显示历史命令
-`ctrl + u` 清除当前行命令
-`ctrl + a` 快速移到行首
-`ctrl + e` 快速移到行尾
++ [http://irising.me/2011/11/12135/](http://irising.me/2011/11/12135/)
 
