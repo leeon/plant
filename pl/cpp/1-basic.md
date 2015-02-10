@@ -9,12 +9,28 @@ description: 一些基本概念
 
 
 
-#存储 & 生命周期
+#存储作用域 & 生命周期
+不同类型的变量拥有不同的作用域和生命周期，不同类型的变量也存储在不同的区域。
+
+局部变量作用域就是其定义所在的作用域。离开作用域后释放。例如一个函数内部定义变量只能在其函数内部访问。
+全局变量作用域是整个程序，其他文件引用全局变量，
+
+静态局部变量，生命周期扩大为所在文件的生命周期，作用域不变。
+静态全局变量，作用域会缩小至其所在的文件。
+
+> 类的静态成员有其他面向对象中的含义。
 
 ###栈
+存储局部变量和函数参数。由编译器自动分配和释放。
+
+进入局部作用域，局部变量进栈，离开作用域，对应的变量出栈，后进先出。
+
 ###堆
-###静态存储区
-###全局存储区
+存储程序通过malloc函数或者new关键字动态申请的内存空间。需要程序通过free函数或者delete关键字主动释放。
+
+###静态存储区 和 全局存储区
+存储静态类型和全局类型。
+
 
 
 
@@ -71,6 +87,7 @@ C++的静态成员列表, 不是定义而是声明。理解：类的静态成员
 
 #参考资料
 
++ [Sina App Engine Blog](http://blog.sae.sina.com.cn/archives/3202)
 + [Effective C++]()
 + [IBM Knowledge Center](http://www-01.ibm.com/support/knowledgecenter/SSGH3R_8.0.0/com.ibm.xlcpp8a.doc/language/ref/cplr038.htm%23cplr038)
 + [What is the difference between a definition and a declaration?](http://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration)

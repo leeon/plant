@@ -154,6 +154,25 @@ Sublime Text 3 编码支持插件。
 ###AllAutocomplete
 Sublime默认只支持单个文件内代码补全提示，这个插件支持全文范围内的代码补全。
 
+
+###CTags
+CTags是一个快速为代码生成索引的工具，通过其创建的索引，可以实现在subl打开的项目中进行数据类型和函数定义的跳转。
+
+在Mac系统中首先安装ctags工具：
+
+    brew install ctags
+
+在SUblime中通说package control安装ctags插件，保证 `/usr/bin/ctags`路径中版本是最新安装的。
+
+**使用:**在项目目录中运行ctags，生成索引：
+
+    ctags -R -f .tags
+
+索引生成完成后，在subl中按住 `cmd+shift` 鼠标点击即可实现跳转。或者直接快捷键`ctrl + t`实现跳转。
+
+
+
+
 #Issues
 
 ###有时插件失效
