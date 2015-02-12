@@ -1,3 +1,9 @@
+---
+layout:     note
+title:      C++ 控制流
+description: 面向过程的控制流
+---
+
 #Control
 
 
@@ -16,11 +22,26 @@
 
 ###for
 
+    for(int i = 10; i > 0; i--)
+    {
+        // 10 count down 
+    }
+
 
 ###while
 
+    while(condition)
+    {
+        // loop
+    }
+
 
 ###do while
+
+    do
+    {
+        // do just for once
+    }while(0)
 
 
 

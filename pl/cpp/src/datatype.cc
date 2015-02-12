@@ -37,7 +37,7 @@ enum eB
 
 enum eTable
 {
-    A,
+    A = 2,
     B,
     C,
     D,
@@ -59,24 +59,38 @@ enum eTable
     T,
 };
 
+eTable getEnum()
+{
+    return eTable(-3);
+}
+
+
 void test_enum()
 {
     printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
 
     printf("sizeof(eTable): %lu\n", sizeof(eTable));
     eTable e = D;
+    eTable e2;    
     int ie = e;
-    e = eTable(-12);
-    
-    eA on = a_on;
-    int ii = on;
-    printf("a_on = b_on %d\n", ii == b_on );    
-    printf("sizeof(e)%lu\n", sizeof(e));
-    printf("%d\n", e);
+    e = getEnum();
+    printf(" e2 = %d\n", e2);
+    printf(" E = %d\n", E);
+    printf(" C = %d\n", C);
+    printf(" D = %d\n", D);
+    printf(" F = %d\n", F);
 
-    int i = e;
-    printf("default e = %d\n", A);
-    printf("from e to i = %d\n", i);
+    printf("%d\n", C == 2 );
+    
+    // eA on = a_on;
+    // int ii = on;
+    // printf("a_on = b_on %d\n", ii == b_on );    
+    // printf("sizeof(e)%lu\n", sizeof(e));
+    // printf("%d\n", e);
+
+    // int i = e;
+    // printf("default e = %d\n", A);
+    // printf("from e to i = %d\n", i);
 
 }
 
@@ -141,6 +155,7 @@ int main(int argc, char const *argv[])
     test_sizeof();    
 
     test_type_conversion();
+
 
     return 0;
 }
