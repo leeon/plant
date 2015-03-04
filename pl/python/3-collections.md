@@ -1,3 +1,8 @@
+---
+layout:     note
+title:      数据类型
+description: 基础数据类型
+---
 
 #集合
 

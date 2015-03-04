@@ -1,3 +1,8 @@
+---
+layout:     note
+title:      基础
+description: 一些基本概念
+---
 
 #注释
     

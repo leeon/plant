@@ -6,12 +6,27 @@ description: 一切的基础
 ---
 
 
-#int
+#基础类型
+
+常用的基础类型包括 char, int , long, float 和 double。其中char int long 还可以使用`unsigned` 指定为无符号类型，即非负的类型。
+
+`datatypee.cc` 中展示了不同类型在具体机器上所占用的空间大小。
+
+> char 和 int 进行运算会进行整型提升，将char转换为int。
+
+
+
+#Struct & Class
+Struct可以理解为对一组数据以及函数的封装。面向过程的开发中可以作为一个功能单元或者数据模块，面向对象开发中可以用来封装一个对象。
+
+Class 是 C++引入的面向对象机制。详细参见class部分。
+
+> struct与class的区别是，其默认成员为public。
 
 
 
 
-#enum
+#Enum
 
 ###使用
 枚举表示一般用于表示一组状态值。例如定义一组表示速度的状态值。

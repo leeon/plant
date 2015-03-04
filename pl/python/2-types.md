@@ -1,4 +1,8 @@
-基本数据类型
+---
+layout:     note
+title:      数据类型
+description: 基础数据类型
+---
 
 
 Python提供numerics, sequences, mappings, files, classes, instances 和 exceptions等内置类型。

@@ -16,12 +16,20 @@ void test_type_conversion()
 void test_sizeof()
 {
     printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+    printf("sizeof char %lu\n", sizeof(char) );
+    printf("sizeof unsigned char %lu\n", sizeof( unsigned char) );
+    
+    printf("sizeof short %lu\n", sizeof(short) );
+    printf("sizeof unsigned short %lu\n", sizeof(unsigned short));
+
     printf("sizeof int %lu\n", sizeof(int) );
     printf("sizeof unsigned int %lu\n", sizeof(unsigned int) );
-    printf("sizeof short %lu\n", sizeof(short) );
+    
     printf("sizeof long %lu\n", sizeof(long) );
     printf("sizeof long long %lu\n", sizeof(long long) );
 
+    printf("sizeof float %lu\n", sizeof(float) );
+    printf("sizeof double %lu\n", sizeof(double) );
 }
 
 
