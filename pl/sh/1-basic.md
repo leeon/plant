@@ -1,3 +1,9 @@
+---
+layout:     note
+title:      指引
+description: 开始编写shell脚本
+---
+
 #Quick Start
 
 shell使用`#` 注释
@@ -22,4 +28,4 @@ Shell脚本可以直接调用Unix/Linux的很多命令来执行程序，它可�
     ./hello.sh
 
 
-###变量
+`hello.sh`中包含了shell脚本示例

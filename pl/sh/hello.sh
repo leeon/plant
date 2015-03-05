@@ -20,7 +20,7 @@ echo "This is your first step in Shell :-)"
 ##########################
 
 #write a var
-#Notice:no space allowed between name and =
+#Notice:no space allowed between name and `=`, or shell will take it as a command
 name="leeon"
 duration=10
 
@@ -44,7 +44,7 @@ echo $* #all parameters
 echo $? #exit code of last thread
 
 # Strings can be wrapped by " or '
-# ' will turn everything into a normal string
+# ' will transfer everything to a normal string
 # " will keep $ and \ the special meaning
 str="string is important."
 #and you can concat strings like this
@@ -69,5 +69,3 @@ echo "${#arr[*]} days are ( ${arr[*]})"
 
 
 # if [ ]
-
-
