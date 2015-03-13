@@ -1,7 +1,7 @@
 ---
 layout:     note
 title:      指针
-description: 魔法
+description: Black Magic
 
 ---
 
@@ -43,18 +43,32 @@ description: 魔法
 
 ###const
 
-下面代码中p1 是一个指向常量的指针，本身可变，指向的内容不可变; 而p2这个指针本身是常量，不可变，但其指向的内容可变。
+下面代码中 ptr 是一个指向const对象的整型指针，它的语法意义是 `*ptr`是一个const对象。如下面代码所示，通过`*ptr`试图对原始整型进行写操作的时候，会产生错误。但ptr本省并非const对象，所以可以修改自身的值从而指向别的对象。事实上，ptr所指向的对象并不要求是const对象。《C++ Primer》中的描述“自认为指向const对象的指针”更为恰当。
 
-    int a = 10;
-    int b = 11;
-    const int *p1 = &a;
-    int * const p2 = &a;
-    *p1 = 12; // err
-    p1 = &b;
-    *p2 = 12;
-    p2 = &b;  //err
+    int a = 0;
+    int b = 1;
+
+    const int *ptr = &a;
+    *ptr = 12; // err
+    ptr = &b;  // ok
+
+    a = 3; // we can change a in some other way
 
 
+另外一个种指针是 const 指针，cptr这个指针自身是const的，不可变，需要定义时初始化。其指向的内容不受限制。
+
+
+
+    int *const cptr = &a;
+    *cptr = 12;
+    cptr = &b;  //err
+
+#####迷惑
+
+const和指针的迷惑来源于`const`和类型之间的位置是可以互换的，例如下面两行代码声明的都是指向const对象的整型指针：
+
+    int const *p1;
+    const int *p2;  //same as code above
 
 
 

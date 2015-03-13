@@ -142,11 +142,32 @@ void diff_constptr_with_ptrconst()
 
 void test_array()
 {
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
     int a[]  = {1,2,3};
 
     printf("%d\n", a[1]);
     printf("%d\n", *(a + 1));
 }
+
+
+void test_ptr()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+
+    int iVal = 12;
+    int iAnotherVal = 13;
+
+    const int *ptr;
+    ptr = &iVal;
+    // *ptr = 13;  //*ptr is const
+
+    int *const cptr = &iVal;
+    *cptr = 23; // ok
+    // cptr =  &iAnotherVal;  //err the ptr is const
+
+    printf("%d\n",*ptr );
+}
+
 
 
 int main(int argc, char const *argv[])
@@ -164,6 +185,7 @@ int main(int argc, char const *argv[])
 
     test_type_conversion();
 
+    test_ptr();
 
     return 0;
 }
