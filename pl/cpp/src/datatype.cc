@@ -13,6 +13,23 @@ void test_type_conversion()
 
 }
 
+void swap_ptr(int* &x, int* &y)
+{
+    int* p;
+    p = x;
+    x = y;
+    y = p;
+}
+
+
+void swap_ptr(int **x, int **y)
+{
+    int *p;
+    p = *x;
+    *x = *y;
+    *y = p;
+}
+
 void test_sizeof()
 {
     printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
@@ -169,7 +186,37 @@ void test_ptr()
 }
 
 
+void test_swap_ptr()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
 
+    int m = 1;
+    int n = 2;
+    int *p = &m;
+    int *q = &n;
+    printf("Before swap ptr : *p = %d *q = %d\n", *p, *q );
+    swap_ptr(&p,&q);
+    printf("After swap ptr : *p = %d *q = %d\n", *p, *q );
+}
+
+
+int sampleFun(const std::string &str)
+{
+    return str.length();
+}
+
+
+void test_func_ptr()
+{
+    printf("\n%s Run:%s():\n", __TIME__,__FUNCTION__);
+    // int (*pfunc) (const std::string &);
+    typedef int (*PFUN) (const std::string &);
+    PFUN pfunc = sampleFun;
+    printf("The length of str is %d\n",pfunc("hello") );
+    printf("The length of str is %d\n",(*pfunc)("hello") );
+
+
+}
 int main(int argc, char const *argv[])
 {
 
@@ -186,6 +233,10 @@ int main(int argc, char const *argv[])
     test_type_conversion();
 
     test_ptr();
+
+    test_swap_ptr();
+
+    test_func_ptr();
 
     return 0;
 }
